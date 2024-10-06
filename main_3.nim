@@ -5,7 +5,9 @@ var text = """English texts for b3ginners to practice read7ng and comprehension 
 # Ниже произведите действия над переменной text
 var schars, counter, numbers: int
 
-
+schars = findAll(text, re("[.,/\\s&|;:!?-]")).join.len
+counter = count(text, "a")
+numbers = findAll(text, re("\\d")).join.parseInt
 
 # Не изменяйте код ниже
 doAssert schars == 57
