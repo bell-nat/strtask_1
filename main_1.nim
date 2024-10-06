@@ -5,7 +5,6 @@ var text = """Фонетическое значение буквы "ë" нево
 # Ниже произведите действия над переменной text
 
 var lines = text.split(". ")
-
 for index in 0..lines.len:
     if index != (lines.len-1):
         add(lines[index], ".")
