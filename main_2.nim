@@ -1,17 +1,13 @@
-import strutils, os  # Все нужные библиотеки уже подключены
+import sequtils, strutils, os  # Все нужные библиотеки уже подключены
 import utils  # Рекомендуем ознакомиться для выполнения задания :)
 
 const RootDir = "folder"
 # Ниже реализуйте требуемую задачу
 var dirs, files, exts: seq[string]
 
-dirs = getDirs(RootDir)
-for index, dir in dirs:
-    dirs[index] = dir.replace(" ", "_")
-
-files = getFiles(RootDir)
-for file in files:
-    exts.add(file.splitFile.ext)
+dirs = RootDir.getDirs.mapit(it.replace(" ", "_"))
+files = RootDir.getFiles
+exts = files.mapIt(it.splitFile.ext)
 
 # Не изменяйте код ниже
 import sets
