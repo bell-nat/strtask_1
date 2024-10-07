@@ -5,7 +5,9 @@ const RootDir = "folder"
 # Ниже реализуйте требуемую задачу
 var dirs, files, exts: seq[string]
 
-
+dirs = RootDir.getDirs.mapit(it.replace(" ", "_"))
+files = RootDir.getFiles
+exts = files.mapIt(it.splitFile.ext)
 
 # Не изменяйте код ниже
 import sets
